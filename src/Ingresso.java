@@ -1,6 +1,5 @@
-import java.util.ArrayList;
-
 public class Ingresso {
+
     private Sessao sessao;
     private Cliente cliente;
 
