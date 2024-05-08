@@ -24,4 +24,9 @@ public class Filme {
         this.genero = genero;
     }
 
+    @Override
+    public String toString() {
+        return "Titulo:"+getTitulo()+"\nGenero:"+getGenero();
+    }
+
 }

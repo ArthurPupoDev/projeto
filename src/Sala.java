@@ -14,8 +14,9 @@ public class Sala {
     }
 
     public void imprimirSessoes(){
+        int i = 0;
         for(Sessao sessao : sessaoList){
-            System.out.println(sessao);
+            System.out.println(i + ". "+sessao);
         }
     }
 
@@ -59,5 +60,9 @@ public class Sala {
 
     public void setSessaoList(List<Sessao> sessaoList) {
         this.sessaoList = sessaoList;
+    }
+
+    public void removeSessaoList(int i){
+        sessaoList.remove(i);
     }
 }

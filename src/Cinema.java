@@ -29,6 +29,14 @@ public class Cinema {
 
     }
 
+    public void imprimirFilmes(){
+        int i = 0;
+        for(Filme filme: filmeList ){
+            System.out.println(i+". "+filme);
+            i++;
+        }
+    }
+
     public String getCinema() {
         return cinema;
     }
@@ -44,4 +52,14 @@ public class Cinema {
     public void setSalaList(List<Sala> salaList) {
         this.salaList = salaList;
     }
+
+    public List<Filme> getFilmeList() {
+        return filmeList;
+    }
+
+    public void setFilmeList(List<Filme> filmeList) {
+        this.filmeList = filmeList;
+    }
+
+
 }
