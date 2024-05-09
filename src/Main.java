@@ -5,8 +5,5 @@ public class Main {
         Cinema cinema = new Cinema();
         Grafico grafico = new Grafico();
         grafico.menuCinema(cinema);
-
-
-
     }
 }

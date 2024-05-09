@@ -17,12 +17,18 @@ public class Sala {
         int i = 0;
         for(Sessao sessao : sessaoList){
             System.out.println(i + ". "+sessao);
+            i++;
         }
     }
 
     public void criarSessao(Filme filme, int limitePessoa, String horario){
         Sessao sessao = new Sessao(filme,limitePessoa, horario);
         sessaoList.add(sessao);
+    }
+
+    public void alterarSessao(Filme filme, int limitePessoa, String horario, int indexSessao){
+        Sessao sessao = new Sessao(filme,limitePessoa, horario);
+        sessaoList.set(indexSessao, sessao);
     }
 
     public void deletarSessao(int index){

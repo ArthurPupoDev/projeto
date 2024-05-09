@@ -7,16 +7,20 @@ public class Sessao {
     private String horario;
     private int limitePessoa;
     private List<Ingresso> listIngresso;
+    private int ingressosVen;
 
     public Sessao(Filme filme,int limitePessoa, String horario){
         setFilme(filme);
         setHorario(horario);
         listIngresso = new ArrayList<>();
+        this.limitePessoa = limitePessoa;
+        this.ingressosVen = 0;
     }
 
     public boolean addIngresso(Ingresso ingresso){
-        if(listIngresso.size() < limitePessoa) {
-            listIngresso.add(ingresso);
+        if(this.ingressosVen <= this.limitePessoa) {
+            this.listIngresso.add(ingresso);
+            this.ingressosVen = this.ingressosVen + 1;
             return true;
         }
         else return false;
